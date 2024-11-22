@@ -169,8 +169,8 @@ class Home extends StatelessWidget {
                                       return TrnsprtDetails(
                                         title: 'Bus',
                                         image: 'assets/images/bus.png',
-                                        location: 'Lorem MRT Station',
-                                        destination: 'Dolor MRT Station',
+                                        location: 'Lorem Bus Station',
+                                        destination: 'Dolor BUS Station',
                                         schedules: schedules,
                                       );
                                     },
