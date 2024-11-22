@@ -13,27 +13,27 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // Example of JSON data as retrieved from the DB
     String schJson = """[{
-   "fromTime":"10:00",
-   "toTime":"10:30",
-   "location":"Lorem MRT Station",
-   "price":5.0
-},
-{
-   "fromTime":"11:05",
-   "toTime":"11:45",
-   "location":"Lorem MRT Station",
-   "price":5.0
-},
-{
-   "fromTime":"11:25",
-   "toTime":"12:30",
-   "location":"Lorem MRT Station",
-   "price":3.0
+      "fromTime":"10:00",
+      "toTime":"10:30",
+      "location":"Lorem MRT Station",
+      "price":5.0
+    },
+    {
+      "fromTime":"11:05",
+      "toTime":"11:45",
+      "location":"Lorem MRT Station",
+      "price":5.0
+    },
+    {
+      "fromTime":"11:25",
+      "toTime":"12:30",
+      "location":"Lorem MRT Station",
+      "price":3.0
+    }]""";
 
-}]""";
     var dSch = jsonDecode(schJson);
     var schedules =
-    (dSch as List).map((data) => new Schedule.fromJson(data)).toList();
+    (dSch as List).map((data) => Schedule.fromJson(data)).toList();
 
     // Example of JSON data as retrieved from the DB
     String accJson =
@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
                           enabledBorder: const OutlineInputBorder(
                             borderRadius:
                             BorderRadius.all(Radius.circular(12.0)),
-                            borderSide: const BorderSide(
+                            borderSide: BorderSide(
                               color: Colors.white,
                             ),
                           ),
@@ -161,7 +161,22 @@ class Home extends StatelessWidget {
                             TransportCard(
                               name: 'Bus',
                               image: 'assets/images/bus.png',
-                              pressSelect: () {},
+                              pressSelect: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return TrnsprtDetails(
+                                        title: 'Bus',
+                                        image: 'assets/images/bus.png',
+                                        location: 'Lorem MRT Station',
+                                        destination: 'Dolor MRT Station',
+                                        schedules: schedules,
+                                      );
+                                    },
+                                  ),
+                                );
+                              },
                             ),
                             SizedBox(height: 16),
                             TransportCard(
@@ -171,8 +186,10 @@ class Home extends StatelessWidget {
                               topValue: 30,
                               bottomValue: 0,
                               pressSelect: () {
-                                Navigator.push(context,
-                                    MaterialPageRoute(builder: (context) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
                                       return TrnsprtDetails(
                                         title: 'MRT',
                                         image: 'assets/images/mrt.png',
@@ -180,7 +197,9 @@ class Home extends StatelessWidget {
                                         destination: 'Dolor MRT Station',
                                         schedules: schedules,
                                       );
-                                    }));
+                                    },
+                                  ),
+                                );
                               },
                             ),
                           ],

@@ -65,7 +65,7 @@ class AccountBox extends StatelessWidget {
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: [ 
                   Text(
                     'Total Trips',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
