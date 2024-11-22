@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:public_transport_app/constants.dart';
+import 'package:public_transport_app/screens/login_screen.dart';
 import 'package:public_transport_app/screens/home_screen.dart';
 import 'package:public_transport_app/screens/map_screen.dart';
 import 'package:public_transport_app/screens/profile_screen.dart';
 
-
-
 void main() => runApp(MaterialApp(
-  home: Main(),
+  home: Login(), // Set Login as the initial screen
   debugShowCheckedModeBanner: false,
   theme: ThemeData(fontFamily: 'OpenSans'),
 ));
@@ -21,6 +20,7 @@ class _MainState extends State<Main> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [Home(), Profile(), MyMap()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +33,7 @@ class _MainState extends State<Main> {
         elevation: 0.0,
         onTap: (int index) {
           setState(() {
-            this._currentIndex = index;
+            _currentIndex = index;
           });
         },
         type: BottomNavigationBarType.fixed,

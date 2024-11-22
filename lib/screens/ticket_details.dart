@@ -3,8 +3,8 @@ import 'package:public_transport_app/constants.dart';
 import 'package:public_transport_app/widgets/ticket_info.dart';
 
 class TicketDetails extends StatelessWidget {
-
   final TicketInfo ticketInfo;
+
   const TicketDetails({Key? key, required this.ticketInfo}) : super(key: key);
 
   @override
@@ -14,10 +14,23 @@ class TicketDetails extends StatelessWidget {
       backgroundColor: kMoonStones,
       body: Column(
         children: <Widget>[
+          // Back arrow and title container
           Container(
             padding: EdgeInsets.only(right: 20.0, left: 20.0, top: 50.0),
-            child: Center(
-                child: Text(
+            child: Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context); // Navigate back to TrnsprtDetails
+                  },
+                  child: Icon(
+                    Icons.arrow_back, // Back arrow icon
+                    color: Colors.white,
+                    size: 28,
+                  ),
+                ),
+                Spacer(), // Adjust spacing
+                Text(
                   'Ticket',
                   style: TextStyle(
                     color: Colors.white,
@@ -25,7 +38,10 @@ class TicketDetails extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontSize: 36.0,
                   ),
-                )),
+                ),
+                Spacer(), // Adjust spacing
+              ],
+            ),
           ),
           Expanded(
             child: Stack(

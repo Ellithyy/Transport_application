@@ -28,10 +28,24 @@ class TrnsprtDetails extends StatelessWidget {
       backgroundColor: kMoonStones,
       body: Column(
         children: <Widget>[
+          // Back arrow and title container
           Container(
             padding: EdgeInsets.only(right: 20.0, left: 20.0, top: 50.0),
-            child: Center(
-                child: Text(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context); // Navigate back to the previous screen
+                  },
+                  child: Icon(
+                    Icons.arrow_back, // Back arrow icon
+                    color: Colors.white,
+                    size: 28,
+                  ),
+                ),
+                Spacer(),
+                Text(
                   title,
                   style: TextStyle(
                     color: Colors.white,
@@ -39,7 +53,10 @@ class TrnsprtDetails extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                     fontSize: 36.0,
                   ),
-                )),
+                ),
+                Spacer(), // Ensure text is centered
+              ],
+            ),
           ),
           SizedBox(height: 10.0),
           Container(
