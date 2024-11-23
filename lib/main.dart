@@ -6,7 +6,7 @@ import 'package:public_transport_app/screens/map_screen.dart';
 import 'package:public_transport_app/screens/profile_screen.dart';
 
 void main() => runApp(MaterialApp(
-  home: Login(), // Set Login as the initial screen
+  home: SplashScreen(), // Set SplashScreen as the initial screen
   debugShowCheckedModeBanner: false,
   theme: ThemeData(fontFamily: 'OpenSans'),
 ));
@@ -57,6 +57,60 @@ class _MainState extends State<Main> {
             label: '',
           ),
         ],
+      ),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Simulate loading time and navigate to the Login screen
+    Future.delayed(Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Login()), // Navigate to Login
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueAccent,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Transport logo
+            Image.asset(
+              'assets/images/png-clipart-bus-rapid-transit-sydney-train-transport-bus-blue-logo.png', // Path to your logo
+              width: 200,
+              height: 200,
+            ),
+            SizedBox(height: 20),
+            // App name
+            Text(
+              'Public Transport App',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(height: 40),
+            // Loading spinner
+            CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            ),
+          ],
+        ),
       ),
     );
   }

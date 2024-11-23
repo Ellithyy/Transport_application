@@ -15,19 +15,19 @@ class Home extends StatelessWidget {
     String schJson = """[{
       "fromTime":"10:00",
       "toTime":"10:30",
-      "location":"Lorem MRT Station",
+      "location":"Nasrcity Station",
       "price":5.0
     },
     {
       "fromTime":"11:05",
       "toTime":"11:45",
-      "location":"Lorem MRT Station",
+      "location":"Nasrcity Station",
       "price":5.0
     },
     {
       "fromTime":"11:25",
       "toTime":"12:30",
-      "location":"Lorem MRT Station",
+      "location":"Nasrcity Station",
       "price":3.0
     }]""";
 
@@ -169,8 +169,8 @@ class Home extends StatelessWidget {
                                       return TrnsprtDetails(
                                         title: 'Bus',
                                         image: 'assets/images/bus.png',
-                                        location: 'Lorem Bus Station',
-                                        destination: 'Dolor BUS Station',
+                                        location: 'Nasrcity BUS Station',
+                                        destination: 'Maadi BUS Station',
                                         schedules: schedules,
                                       );
                                     },
@@ -193,8 +193,8 @@ class Home extends StatelessWidget {
                                       return TrnsprtDetails(
                                         title: 'MRT',
                                         image: 'assets/images/mrt.png',
-                                        location: 'Lorem MRT Station',
-                                        destination: 'Dolor MRT Station',
+                                        location: 'Nasrcity MRT Station',
+                                        destination: 'Maadi MRT Station',
                                         schedules: schedules,
                                       );
                                     },
