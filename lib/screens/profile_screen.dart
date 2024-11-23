@@ -32,7 +32,7 @@ class _ProfileState extends State<Profile> {
             SizedBox(height: 15),
             // User Name
             Text(
-              'Nour Elamour', // Replace with dynamic data if available
+              'Muhammad Ellithy', // Replace with dynamic data if available
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -42,7 +42,7 @@ class _ProfileState extends State<Profile> {
             SizedBox(height: 5),
             // User Email
             Text(
-              'NourElamour@gmail.com', // Replace with dynamic data if available
+              'MuhammadEllithy@gmail.com', // Replace with dynamic data if available
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey,

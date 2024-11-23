@@ -55,7 +55,7 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'Hello,\nNour Elamour',
+                      'Hello,\nMuhammad',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w700,
