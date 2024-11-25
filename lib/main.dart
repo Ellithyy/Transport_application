@@ -90,7 +90,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             // Transport logo
             Image.asset(
-              'assets/images/png-clipart-bus-rapid-transit-sydney-train-transport-bus-blue-logo.png', // Path to your logo
+              'assets/images/3lqlxlh5.png', // Path to your logo
               width: 200,
               height: 200,
             ),

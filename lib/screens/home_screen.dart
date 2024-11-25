@@ -169,8 +169,8 @@ class Home extends StatelessWidget {
                                       return TrnsprtDetails(
                                         title: 'Bus',
                                         image: 'assets/images/bus.png',
-                                        location: 'Nasrcity BUS Station',
-                                        destination: 'Maadi BUS Station',
+                                        location: 'Nasrcity BUSStation',
+                                        destination: 'Maadi BUSStation',
                                         schedules: schedules,
                                       );
                                     },
@@ -193,8 +193,8 @@ class Home extends StatelessWidget {
                                       return TrnsprtDetails(
                                         title: 'MRT',
                                         image: 'assets/images/mrt.png',
-                                        location: 'Nasrcity MRT Station',
-                                        destination: 'Maadi MRT Station',
+                                        location: 'Nasrcity MRTStation  ',
+                                        destination: 'Maadi MRTStation',
                                         schedules: schedules,
                                       );
                                     },
